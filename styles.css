@@ -45,11 +45,6 @@ a {
     text-decoration: none;
 }
 
-/* .page {
-    margin: 20px;
-    color: #ffffff;
-} */
-
 .header {
     display: flex;
     align-items: center;
@@ -60,10 +55,6 @@ a {
 }
 
 .header-data {
-    /* position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 0 auto; */
     position: absolute;
     text-align: center;
     width: 100%;
@@ -114,8 +105,6 @@ a {
 }
 
 .main {
-    /* margin: 50px auto 100px;
-    flex: 1; */
     display: block;
     text-align: center;
     padding: 20px;
@@ -127,12 +116,6 @@ a {
     justify-content: space-around;
 }
 
-/* .gallery-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-} */
-
 .gallery-item {
     max-width: 380px;
     max-height: 200px;
@@ -143,12 +126,6 @@ a {
     height: auto;
     object-fit: contain;
 }
-
-/* .gallery-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-} */
 
 .gallery-custom {
     display: flex;
@@ -184,9 +161,6 @@ a {
 }
 
 .slide {
-    /* width: 600px;
-    height: 400px;
-    flex-shrink: 0; */
     width: 100%;
     height: auto;
     width: 600px;
@@ -316,13 +290,12 @@ a:hover {
 @media (max-width: 767px) {
 
     .header {
-        /* flex-direction: column; */
         height: auto;
         text-align: center;
     }
 
     .header-data_logo {
-        width: 7vh;
+        width: 5vh;
         margin: 0;
     }
 
@@ -347,14 +320,6 @@ a:hover {
         display: flex;
         transition: transform 0.5s ease-in-out;
     }
-
-    /* .slide {
-        width: 100%;
-        height: auto;
-        width: 600px;
-        height: 400px;
-        flex-shrink: 0;
-    } */
 
     .slide img {
         width: 100%;
@@ -395,30 +360,3 @@ a:hover {
     }
 
 }
-
-/* 
-@media (min-width: 992px) {
-
-    .header-data {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .header-data_contacts {
-        margin-left: auto;
-        text-align: right;
-    }
-
-    .navigation-list {
-        justify-content: space-around;
-    }
-
-    .slider-container {
-        width: 600px;
-    }
-
-    .slide {
-        width: 600px;
-        height: 400px;
-} }*/
