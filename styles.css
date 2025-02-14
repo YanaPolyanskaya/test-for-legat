@@ -10,6 +10,8 @@ body {
     background-image: url("/images/фон.jpg");
     background-size: cover;
     min-height: 100vh;
+    margin: 10px;
+    color: #fff;
 }
 
 body::before {
@@ -43,35 +45,37 @@ a {
     text-decoration: none;
 }
 
-.page {
+/* .page {
     margin: 20px;
     color: #ffffff;
-}
+} */
 
 .header {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
     background-color: #001f18;
-    right: 20px;
-    padding-right: 20px;
+    padding: 10px;
+    position: relative;
+    height: 150px;
 }
 
 .header-data {
-    display: flex;
-    background-color: #001f18;
-    height: 200px;
-
+    /* position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto; */
+    position: absolute;
+    text-align: center;
+    width: 100%;
 }
 
 .header-data_logo {
     max-width: 150px;
-    height: auto;
-    display: block;
-    position: absolute;
-    align-content: center;
-    top: 6vh;
-    left: 45%;
+}
+
+.header-data_contacts {
+    margin-left: auto;
+    text-align: right;
 }
 
 .navigation-list,
@@ -81,7 +85,10 @@ a {
     justify-content: space-around;
     padding: 0;
     list-style: none;
+}
 
+.navigation-list li {
+    margin-bottom: 5px;
 }
 
 .about-list,
@@ -107,8 +114,11 @@ a {
 }
 
 .main {
-    margin: 50px auto 100px;
-    flex: 1;
+    /* margin: 50px auto 100px;
+    flex: 1; */
+    display: block;
+    text-align: center;
+    padding: 20px;
 }
 
 .gallery {
@@ -116,6 +126,12 @@ a {
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
+/* .gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+} */
 
 .gallery-item {
     max-width: 380px;
@@ -127,6 +143,12 @@ a {
     height: auto;
     object-fit: contain;
 }
+
+/* .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+} */
 
 .gallery-custom {
     display: flex;
@@ -162,6 +184,11 @@ a {
 }
 
 .slide {
+    /* width: 600px;
+    height: 400px;
+    flex-shrink: 0; */
+    width: 100%;
+    height: auto;
     width: 600px;
     height: 400px;
     flex-shrink: 0;
@@ -195,12 +222,6 @@ a {
 
 .next {
     right: 10px;
-}
-
-main {
-    display: block;
-    text-align: center;
-    padding: 20px;
 }
 
 .contact-info {
@@ -289,3 +310,115 @@ a:hover {
     text-align: center;
     padding: 10px;
 }
+
+/* для телефона */
+
+@media (max-width: 767px) {
+
+    .header {
+        /* flex-direction: column; */
+        height: auto;
+        text-align: center;
+    }
+
+    .header-data_logo {
+        width: 10vh;
+        margin: 0;
+    }
+
+    .navigation-list {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .slider-container {
+        width: 90%;
+    }
+
+    .slider-container {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    /* .slide {
+        width: 100%;
+        height: auto;
+        width: 600px;
+        height: 400px;
+        flex-shrink: 0;
+    } */
+
+    .slide img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+/* для планшета */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .navigation-list {
+        justify-content: space-around;
+    }
+
+    .header-data {
+        position: absolute;
+        text-align: center;
+        width: 100%;
+    }
+
+    .header-data_contacts {
+        text-align: right;
+        margin-left: auto;
+    }
+
+    .header-data_logo {
+        margin: 0;
+    }
+
+    .slider-container {
+        width: 80%;
+    }
+
+    .slide {
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+/* 
+@media (min-width: 992px) {
+
+    .header-data {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .header-data_contacts {
+        margin-left: auto;
+        text-align: right;
+    }
+
+    .navigation-list {
+        justify-content: space-around;
+    }
+
+    .slider-container {
+        width: 600px;
+    }
+
+    .slide {
+        width: 600px;
+        height: 400px;
+} }*/

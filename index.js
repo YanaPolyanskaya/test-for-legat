@@ -2,6 +2,8 @@ const slider = document.querySelector('.slider');
 const slides = document.querySelectorAll('.slide');
 const prevButton = document.querySelector('.prev');
 const nextButton = document.querySelector('.next');
+const openGalleryButton = document.getElementById('openGalleryButton');
+const gallery = document.getElementById('gallery');
 
 let slideIndex = 0;
 const slideWidth = slides[0].offsetWidth;
@@ -27,17 +29,13 @@ nextButton.addEventListener('click', () => {
 });
 
 showSlide(slideIndex);
-
-document.addEventListener('DOMContentLoaded', function () {
-    const openGalleryButton = document.getElementById('openGalleryButton');
-    const gallery = document.getElementById('gallery');
-
-    openGalleryButton.addEventListener('click', function () {
-
-        if (gallery.style.display === 'none') {
-            gallery.style.display = 'flex';
-        } else {
-            gallery.style.display = 'none';
-        }
-    });
+openGalleryButton.addEventListener('click', () => {
+    openGallery();
 });
+function openGallery() {
+    if (gallery.style.display === 'none') {
+        gallery.style.display = 'flex';
+    } else {
+        gallery.style.display = 'none';
+    }
+}
