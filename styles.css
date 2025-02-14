@@ -7,7 +7,7 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    background-image: url("/images/фон.jpg");
+    background-image: url("images/фон.jpg");
     background-size: cover;
     min-height: 100vh;
     margin: 10px;
@@ -322,7 +322,7 @@ a:hover {
     }
 
     .header-data_logo {
-        width: 10vh;
+        width: 7vh;
         margin: 0;
     }
 
