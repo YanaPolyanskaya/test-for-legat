@@ -30,7 +30,6 @@ h2,
 h3 {
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
-    font-weight: 700;
     font-style: normal;
     color: #ffffff;
 }
@@ -39,7 +38,6 @@ p,
 a {
     font-family: "Roboto", serif;
     font-optical-sizing: auto;
-    font-weight: 400;
     font-style: normal;
     color: #ffffff;
     text-decoration: none;
@@ -288,6 +286,10 @@ a:hover {
 /* для телефона */
 
 @media (max-width: 767px) {
+    body {
+        min-height: 100vh;
+        width: 100%;
+    }
 
     .header {
         height: auto;
@@ -295,8 +297,12 @@ a:hover {
     }
 
     .header-data_logo {
-        width: 5vh;
+        width: 8vh;
         margin: 0;
+    }
+
+    .header-data_contacts {
+        font-size: 0.5em;
     }
 
     .navigation-list {
